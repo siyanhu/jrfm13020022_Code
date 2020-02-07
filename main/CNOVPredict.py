@@ -8,7 +8,7 @@ from statsmodels.graphics.tsaplots import plot_acf
 from statsmodels.graphics.tsaplots import plot_pacf
 
 # Loaddataset
-path = "/Users/husiyan/Google Drive/备份-完成的课题与项目/研究-VirusPaper/data/version4/nv.csv"
+path = "/Users/husiyan/Google Drive/备份-完成的课题与项目/研究-VirusPaper/data/version5/nv.csv"
 names = ['Date', 'Num_confirmed_patients', 'Num_deaths']
 dataset = pd.read_csv(path, names=names)
 
@@ -60,7 +60,7 @@ def plot_arima(truth, forecasts, title="ARIMA", xaxis_label='Time',
     return forecasts
 
 
-y_hat = np.append(fittedmodel.predict_in_sample(), fittedmodel.predict(20))
+y_hat = np.append(fittedmodel.predict_in_sample(), fittedmodel.predict(30))
 predict_dataset = plot_arima(data, y_hat,
                 title="Original Series & In-sample Predictions",
                 c2='#FF0000', forecast_start=0)

@@ -9,7 +9,7 @@ from statsmodels.graphics.tsaplots import plot_acf
 from statsmodels.graphics.tsaplots import plot_pacf
 
 # Loaddataset
-path = "/Users/husiyan/Google Drive/备份-完成的课题与项目/研究-VirusPaper/data/version4/gdp_continue.csv"
+path = "/Users/husiyan/Google Drive/备份-完成的课题与项目/研究-VirusPaper/data/version4/gdp_interval.csv"
 names = ['Index', 'Date', 'Quarter', 'GDP']
 dataset = pd.read_csv(path, names=names)
 
@@ -51,11 +51,14 @@ diff2.dropna(inplace=True)
 (p, q) =(sm.tsa.arma_order_select_ic(diff2,max_ar=3 ,max_ma=3 ,ic='aic')['aic_min_order'])
 print(p,q)
 #
-arima110 = sm.tsa.ARIMA(diff2,(p,2,q)).fit(disp = 0)
-fig = arima110.plot_predict(start=0, end = 80, dynamic=False, plot_insample=True)
-fig.set_figwidth(15)
-fig.set_figheight(8)
-plt.show()
+arima110 = sm.tsa.SARIMAX(train_data, order=(1, 1, 0), trend='c')
+res = arima110.fit()
+print(res.summary())
+print(res.forecast(4))
+# fig = arima110.plot_predict(start=1, end=80, dynamic=False, plot_insample=True)
+# fig.set_figwidth(15)
+# fig.set_figheight(8)
+# plt.show()
 
 # data = np.array(train_dataset.values).T[0]
 # fittedmodel = auto_arima(train_data, start_p=1, start_q=1, max_p=3, max_q=3, max_d=3,max_order=None,
