@@ -14,7 +14,8 @@ dataset = pd.read_csv(path, names=names)
 
 # Split trainning and precition
 train_cls = {
-    'Num_confirmed_deaths': dataset.iloc[:,1].values
+    'Num_confirmed_patients': dataset.iloc[:,1].values,
+    'Num_confirmed_deaths': dataset.iloc[:,2].values
 }
 train_dataset = pd.DataFrame(train_cls, columns = ['Num_confirmed_deaths'])
 train_dataset.set_index(dataset.iloc[:, 0].values, inplace=True)
@@ -29,7 +30,7 @@ print('ADF Statistic: %f' % result[0])
 print('p-value: %f' % result[1])
 plot_acf(train_data)
 plot_pacf(train_data)
-# plt.show()
+plt.show()
 (p, q) =(sm.tsa.arma_order_select_ic(train_data,max_ar=3 ,max_ma=3 ,ic='aic')['aic_min_order'])
 print(p,q)
 
