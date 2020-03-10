@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-import DataUtil.Article as articleClass
+import util.Article as articleClass
 
 url = "https://www.scmp.com"
 wbdata = requests.get(url).text
@@ -18,6 +18,7 @@ for n in news_titles:
     artl = articleClass.article(title, link)
     articles.append(artl)
 
+print(articles)
 # Create Path DB
 def decomposePath(articleList):
     for record in articleList:
