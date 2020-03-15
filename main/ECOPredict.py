@@ -9,7 +9,7 @@ from statsmodels.graphics.tsaplots import plot_acf
 from statsmodels.graphics.tsaplots import plot_pacf
 
 # Loaddataset
-path = "/Users/husiyan/Google Drive/备份-完成的课题与项目/研究-VirusPaper/data/version6/seasonal.csv"
+path = "/Users/husiyan/Google Drive/备份-完成的课题与项目/研究-VirusPaper/review/data/raw_data.csv"
 names = ['Quarter', 'GDP', 'EPIC']
 dataset = pd.read_csv(path, names=names)
 
@@ -18,11 +18,8 @@ train_cls = {
     'GDP': dataset.iloc[:,1].values,
     'EPIC': dataset.iloc[:,2].values
 }
-# train_cls['NEW'] = train_cls.apply(lambda raw:my_test(train_cls['GDP'], train_cls['EPIC']), axis=1)
+
 train_dataset = pd.DataFrame(train_cls, columns = ['GDP'])
-# train_dataset = pd.DataFrame()
-# train_dataset['NEW'] = train_dataset.apply(lambda raw:my_test(train_cls['GDP'], train_cls['EPIC']), axis=1)
-# print(train_dataset['NEW'])
 train_dataset.set_index(dataset.iloc[:, 0].values, inplace=True)
 train_data = pd.Series(train_dataset['GDP'])
 train_data.head()
