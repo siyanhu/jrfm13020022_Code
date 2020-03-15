@@ -8,3 +8,9 @@ class article:
 
     def saveText(self, crawled):
         self.raw_text = crawled
+
+    def __washText(self, textToWash):
+        newText = ""
+        # if "\n" in textToWash:
+
+        return ""
