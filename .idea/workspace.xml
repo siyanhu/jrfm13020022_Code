@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b8b0e6cb-3494-4ae2-92ce-65b9948da8a3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/other.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/structures/TreeStruct.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jrfm13020022_Code.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jrfm13020022_Code.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/CNOVPredict.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/CNOVPredict.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/ECOPredict.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/ECOPredict.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/NewsCrawler.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/NewsCrawler.py" afterDir="false" />
-    </list>
+    <list default="true" id="b8b0e6cb-3494-4ae2-92ce-65b9948da8a3" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,6 +45,9 @@
       <module name="jrfm13020022_Code" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="/usr/local/bin/python3.7" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/main" />
       <option name="IS_MODULE_SDK" value="false" />
@@ -155,6 +149,7 @@
       <workItem from="1584157595378" duration="346000" />
       <workItem from="1584200115357" duration="2472000" />
       <workItem from="1584208955500" duration="1041000" />
+      <workItem from="1584278015856" duration="128000" />
     </task>
     <servers />
   </component>
