@@ -9,7 +9,7 @@ from statsmodels.graphics.tsaplots import plot_acf
 from statsmodels.graphics.tsaplots import plot_pacf
 
 # Loaddataset
-path = "/Users/husiyan/Google Drive/备份-完成的课题与项目/研究-VirusPaper/review/data/raw_data.csv"
+path = "/Users/husiyan/Google Drive/备份-完成的课题与项目/研究-VirusPaper/review/data/seasonal.csv"
 names = ['Quarter', 'GDP', 'EPIC']
 dataset = pd.read_csv(path, names=names)
 
